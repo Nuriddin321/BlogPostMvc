@@ -1,0 +1,242 @@
+﻿@* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BlogMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BlogMvc.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BlogMvc</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="display: block;">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Create">Create post</a>
+                        </li>
+                    </ul>
+                    <ul style="float: right; display: flex;">
+                        @if(!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                        }
+                        else
+                        {
+
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link text-dark">@User.Identity.Name</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none;">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - BlogMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> *@
+
+
+@* ///////////////////////////////////////////////////////////////////////////// *@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog post 👨‍💻</title>
+
+    <link rel="stylesheet"
+        href="https://dev.to/assets/minimal-5b7906f8aca74447068af5f8677182f4484365f08317cfdd7215fd38bcceaeb2.css"
+        media="all" id="main-minimal-stylesheet" />
+    <link rel="stylesheet"
+        href="https://dev.to/assets/views-adcc9bb9e58066597a2bf176ff2c7ff32e4557b39b23a321e1bea133abbbfd2e.css"
+        media="all" id="main-views-stylesheet" />
+    <link rel="stylesheet"
+        href="https://dev.to/assets/crayons-e9fbb78d890e905ed5296a60d0ca4546c541a785d89ce88512a478702abb496f.css"
+        media="all" id="main-crayons-stylesheet" />
+
+    <script src="https://dev.to/assets/base-70b1aebd44e9f1da8db1ebcf720d82618a78cbd30a7df11797fd242a62fe8b5f.js"
+        defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtime~base-c175d942d7b6a0db3a13.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/base-733e92cb9c069f69bcd1.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtime~Search-85895e0c7f6c8dea46be.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/0-f48a6a10b4b68e0b68df.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/1-b8f877f9100ba6b1ffba.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/Search-1950ff7ec7ee91a750b7.chunk.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtime~runtimeBanner-500e78c4ef444f101304.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/runtimeBanner-e13d2ab8efae3cafae9d.chunk.js" defer="defer"></script>
+
+
+</head>
+
+<body class="sans-serif-article-body default-header" data-user-status="logged-out"
+    data-deployed-at="2022-09-23T18:28:08Z" data-latest-commit-id="7b0f8b6011a030806d4e68c3107baedb401e59bc"
+    data-ga-tracking="UA-71991109-1" data-ga4-tracking-id="G-TYEM8Y3JN3">
+    <link rel="stylesheet"
+        href="https://dev.to/assets/minimal-5b7906f8aca74447068af5f8677182f4484365f08317cfdd7215fd38bcceaeb2.css"
+        media="all" id="secondary-minimal-stylesheet" />
+    <link rel="stylesheet"
+        href="https://dev.to/assets/views-adcc9bb9e58066597a2bf176ff2c7ff32e4557b39b23a321e1bea133abbbfd2e.css"
+        media="all" id="secondary-views-stylesheet" />
+    <link rel="stylesheet"
+        href="https://dev.to/assets/crayons-e9fbb78d890e905ed5296a60d0ca4546c541a785d89ce88512a478702abb496f.css"
+        media="all" id="secondary-crayons-stylesheet" />
+
+    <div id="body-styles">
+        <style>
+            :root {
+                --accent-brand-lighter-rgb: 80, 99, 301;
+                --accent-brand-rgb: 59, 73, 223;
+                --accent-brand-darker-rgb: 47, 58, 178;
+            }
+        </style>
+    </div>
+    <div id="audiocontent" data-podcast="">
+
+    </div>
+    <div class="navigation-progress" id="navigation-progress"></div>
+    <header class="crayons-header print-hidden">
+        <span id="route-change-target" tabindex="-1"></span>
+        <div class="crayons-header__container">
+            <span class="inline-block m:hidden ">
+                <button class="c-btn c-btn--icon-alone js-hamburger-trigger mx-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        aria-labelledby="aravcscfv8bdyuae500u1h3miabbpr2v" class="crayons-icon">
+                        <title id="aravcscfv8bdyuae500u1h3miabbpr2v">Navigation menu</title>
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+                    </svg>
+
+                </button>
+            </span>
+            <a href="/" class="site-logo" aria-label="DEV Community 👩‍💻👨‍💻 Home">
+                <img class="site-logo__img"
+                    src="https://1.bp.blogspot.com/-6p2AbZ_Ft0g/YFp8WCKhjuI/AAAAAAAAGkI/0UlNzGXE7mY_V8Ux3mY48pww1_5XvYAYwCLcBGAsYHQ/s0/Expert%2BTips%2BTo%2BWrite%2BBlog%2BPosts%2BFaster%2BIn%2B%2B%25281%2529%2B-%2Bguitricks.com.jpg"
+                    alt="DEV Community 👩‍💻👨‍💻">
+            </a>
+
+
+            <div class="crayons-header--search js-search-form" id="header-search">
+                <form >    @* accept-charset="UTF-8" method="get" action="/search" role="search"*@
+                    <div class="crayons-fields crayons-fields--horizontal">
+                        <div class="crayons-field flex-1 relative">
+                            <input class="crayons-header--search-input crayons-textfield js-search-input" type="text"
+                                id="nav-search" name="q" placeholder="Search..." autocomplete="off" />
+                            <button type="submit" aria-label="Search"
+                                class="c-btn c-btn--icon-alone absolute inset-px left-auto mt-0 py-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ai2hf1pcn0iuusxvf1r9cg3t770edvrs" aria-hidden="true"
+                                    class="crayons-icon">
+                                    <title id="ai2hf1pcn0iuusxvf1r9cg3t770edvrs">Search</title>
+                                    <path
+                                        d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                                    </path>
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="flex items-center h-100 ml-auto">
+                <a class="c-link c-link--icon-alone c-link--block m:hidden mx-1" id="search-link" aria-label="Search"  > @*href="/search"*@
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        aria-labelledby="a7v4osww10vrdjd24fue3ouprmnxsnt8" class="crayons-icon">
+                        <title id="a7v4osww10vrdjd24fue3ouprmnxsnt8">Search</title>
+                        <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                        </path>
+                    </svg>
+
+                </a>
+                <div class="flex" id="authentication-top-nav-actions">
+                    @if(!User.Identity.IsAuthenticated)
+                    {
+                        <span class="hidden m:block">
+                            <a   asp-controller="Account" asp-action="Login" class="c-link c-link--block mr-2 whitespace-nowrap ml-auto" data-no-instant >
+                                Log in
+                            </a>
+                        </span>
+
+                        <a asp-controller="Account" asp-action="Register" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant>
+                            Create account
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Post" asp-action="Create" data-tracking-id="ca_top_nav" data-tracking-source="top_navbar" class="c-cta c-cta--branded whitespace-nowrap mr-2" data-no-instant> Create Post 
+                        </a>
+
+                        <span class="crayons-avatar crayons-avatar--l"><img class="crayons-avatar__image" alt=""
+                                    id="nav-profile-image" /></span>
+                    }
+
+                    @* <button type="button" class="c-btn c-btn--icon-alone radius-full p-1" id="member-menu-button"
+                        aria-label="Navigation menu" aria-expanded="false">
+                        <span class="crayons-avatar crayons-avatar--l"><img class="crayons-avatar__image" alt=""
+                                id="nav-profile-image" /></span>
+                    </button> *@
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--Index.cshtml
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->   
+         @RenderBody()
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+ 
+
+    <div id="snack-zone"></div>
+
+
+    <script src="https://dev.to/packs/js/runtime~signupModalShortcuts-62d6b09df96a2a2eff61.js" defer="defer"></script>
+    <script src="https://dev.to/packs/js/signupModalShortcuts-618dfb91b3a6ebfee59e.chunk.js" defer="defer"></script>
+
+    <div id="i18n-translations"
+        data-translations="{&quot;en&quot;:{&quot;core&quot;:{&quot;add_comment&quot;:&quot;Add comment&quot;,&quot;beta&quot;:&quot;beta&quot;,&quot;comment&quot;:&quot;Comment&quot;,&quot;copy_link&quot;:&quot;Copy link&quot;,&quot;edit_profile&quot;:&quot;Edit profile&quot;,&quot;follow&quot;:&quot;Follow&quot;,&quot;follow_back&quot;:&quot;Follow back&quot;,&quot;following&quot;:&quot;Following&quot;,&quot;like&quot;:&quot;Like&quot;,&quot;loading&quot;:&quot;loading...&quot;,&quot;reaction&quot;:&quot;Reaction&quot;,&quot;report_abuse&quot;:&quot;Report abuse&quot;,&quot;search&quot;:&quot;Search&quot;,&quot;success_settings&quot;:&quot;Successfully updated settings.&quot;}}}">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+@model RegisterViewModel
+
+@* <h1>Register Page</h1>
+
+<form method="post" enctype="multipart/form-data">
+  <input hidden="true" asp-for="@Model.ReturnUrl">
+  <div class="mb-3">
+    <label asp-for="@Model.Username" class="form-label">Username</label>
+    <input type="text" asp-for="@Model.Username" class="form-control" placeholder="username">
+  </div>
+  <div class="mb-3">
+    <label asp-for="@Model.Password" class="form-label">Password</label>
+    <input type="password" asp-for="@Model.Password" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label asp-for="@Model.Avatar" class="form-label">Avatar</label>
+    <input type="file" accept="image/*" asp-for="@Model.Avatar" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form> *@
+<br>
+<br>
+
+<section class="crayons-layout">
+    <div class="registration crayons-card">
+        <div class="registration__content">
+            <h1 class="registration__title"> Welcome to BlogPost </h1>
+            <h3>Create account</h3>
+        </div>
+
+        <div class="registration__actions">
+            
+
+            <div class="registration__actions-email" id="sign-in-password-form">
+                <div class="registration__hr"> </div>
+                <br>
+                <form  method="post" enctype="multipart/form-data">
+                    <input hidden="true" asp-for="@Model.ReturnUrl">
+                    
+                    <div class="crayons-field mb-3">
+                        <label class="crayons-field__label" asp-for="@Model.Username">UserName</label>
+                        <input asp-for="@Model.Username" class="crayons-textfield" type="text" required />
+                    </div>
+
+                    <div class="crayons-field mb-3">
+                        <label asp-for="@Model.Password" class="crayons-field__label"  >Password</label>
+                        <input asp-for="@Model.Password" class="crayons-textfield" type="password" required />
+                    </div>
+
+                      <div class="crayons-field mb-3">
+                        <label class="crayons-field__label" asp-for="@Model.Avatar">Avatar</label>
+                        <input type="file" accept="image/*" asp-for="@Model.Avatar" required />
+                    </div>
+
+                    <div class="actions pt-3">
+                        <input type="submit" name="commit" value="Create"
+                            class="crayons-btn crayons-btn--l w-100" data-disable-with="Continue" />
+                    </div>
+
+                      <br>
+
+                    <div class="registration__hr">
+                        <span class="registration__hr-label">
+                          Already have an account? <a  asp-controller ="Account" asp-action="Login">Log in</a>.
+                        </span>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

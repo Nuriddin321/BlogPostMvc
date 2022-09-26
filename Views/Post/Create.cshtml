@@ -1,0 +1,80 @@
+@model CreateOrUpdateViewModel
+
+@* <h1>Create post</h1>
+
+<form method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label asp-for="@Model.Title" class="form-label">Title</label>
+    <input type="text" asp-for="@Model.Title" class="form-control" placeholder="Title">
+  </div>
+  <div class="mb-3">
+    <label asp-for="@Model.Content" class="form-label">Content</label>
+    <textarea asp-for="@Model.Content" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label asp-for="@Model.Image" class="form-label">Image</label>
+    <input type="file" accept="image/*" asp-for="@Model.Image" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Create</button>
+</form> *@
+
+<main class="articles-list crayons-layout__content" id="main-content"
+            data-follow-button-container="true">
+    <form   method="post" enctype="multipart/form-data">
+
+        <div class="crayons-article-form__header">
+            <div class="crayons-article-form__close">
+                <a href="/" class="crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon" title="Close the editor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        aria-labelledby="a4uy9wkl7d1dah6vw5boono840l077g6" class="crayons-icon">
+                        <title id="a4uy9wkl7d1dah6vw5boono840l077g6">Close</title>
+                        <path
+                            d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95z">
+                        </path>
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+
+        <div class="crayons-card crayons-article-form__content">
+            <div class="text-padding">
+                <div class="crayons-article-form__cover" role="presentation">
+                    <button class="crayons-btn crayons-btn--outlined mr-2">
+                        <label asp-for="@Model.Image"  >
+                            Add a cover image
+                        </label>
+                        <input asp-for="@Model.Image" id="cover-image-input" type="file" accept="image/*"
+                            class="w-100 h-100 absolute left-0 right-0 top-0 bottom-0 overflow-hidden opacity-0 cursor-pointer"
+                            data-max-file-size-mb="25" required>
+                    </button>
+                </div>
+                <div class="crayons-article-form__title">
+                    <textarea
+                        asp-for="@Model.Title"
+                        class="crayons-textfield crayons-textfield--ghost fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight"
+                        type="text" id="article-form-title" placeholder="New post title here..."
+                        autocomplete="off" required>
+                    </textarea>
+                </div>
+                <div>
+                    <textarea
+                        asp-for="@Model.Content"
+                        class="crayons-textfield   fs-3xl m:fs-1xl l:fs-1xl   lh-tight"
+                        type="text" id="article-form-title"   placeholder=" content here..."
+                        rows="15" cols="60" required >
+                    </textarea>
+                </div>
+
+                <div class="actions pt-3">
+                  <input type="submit" name="commit" value="Create"
+                      class="crayons-btn crayons-btn--l w-100" data-disable-with="Continue" />
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+    
+  
+
+ 

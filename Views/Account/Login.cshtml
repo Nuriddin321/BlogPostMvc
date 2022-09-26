@@ -1,0 +1,57 @@
+@model LoginViewModel
+@* 
+<h1>Login Page</h1>
+
+<form method="post">
+  <input hidden="true" asp-for="@Model.ReturnUrl">
+  <div class="mb-3">
+    <label asp-for="@Model.Username" class="form-label">Username</label>
+    <input type="text" asp-for="@Model.Username" class="form-control" placeholder="username">
+  </div>
+  <div class="mb-3">
+    <label asp-for="@Model.Password" class="form-label">Password</label>
+    <input type="password" asp-for="@Model.Password" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<p>Akkountingiz yo'qmi. <a href="register?ReturnUrl=@Model.ReturnUrl">Registerdan</a> o'ting.</p> *@
+
+<br>
+<br>
+<br>
+
+<section class="crayons-layout">
+    <div class="registration crayons-card">
+        <div class="registration__content">
+            <h1 class="registration__title"> Welcome to BlogPost </h1>
+        </div>
+
+        <div class="registration__actions">
+            <div class="registration__actions-email" id="sign-in-password-form">
+                <div class="registration__hr"> </div>
+                <br>
+                <form method="post"> 
+
+                    <input hidden="true" asp-for="@Model.ReturnUrl">
+
+                    <div class="crayons-field mb-3">
+                        <label  asp-for="@Model.Username" class="crayons-field__label" class="form-control" >UserName</label>
+                        <input  asp-for="@Model.Username" class="crayons-textfield" type="text" required />
+                    </div>
+
+                    <div class="crayons-field mb-3">
+                        <label type="password" asp-for="@Model.Password" class="form-control"  for="user_password">Password</label>
+                        <input  type="password" asp-for="@Model.Password" class="crayons-textfield" type="password" required/>
+                    </div>
+
+                    <div class="actions pt-3">
+                        <input type="submit" name="commit" value="Login"
+                            class="crayons-btn crayons-btn--l w-100" data-disable-with="Continue" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

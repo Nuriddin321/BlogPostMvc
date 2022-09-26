@@ -1,0 +1,922 @@
+﻿@* @{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+
+@model   IEnumerable<PostViewModel>
+@* 
+<div class="">
+    <img src="@Model.Image" alt="image">
+    <h3>@Model.Title</h3>
+    <p>@Model.Content</p>
+    @if(@Model.IsEdited)
+    {
+        <span>@Model.UpdatedDate</span>
+    }
+    <span>@Model.CreatedDate</span>
+</div> *@
+
+    <div id="active-broadcast" class="broadcast-wrapper"></div>
+    <div id="message-notice"></div>
+    <div id="base-payment-pointer" data-payment-pointer="$ilp.uphold.com/24HhrUGG7ekn"></div>
+    <div id="page-content" class="wrapper stories stories-index" data-current-page="stories-index">
+        <div id="page-content-inner">
+            <div id="page-route-change" class="screen-reader-only" aria-live="polite" aria-atomic="true"></div>
+
+            <script src="https://dev.to/packs/js/runtime~homePage-bcc27e9a37ef8a24410e.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/0-f48a6a10b4b68e0b68df.chunk.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/1-b8f877f9100ba6b1ffba.chunk.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/homePage-8dbf0e9835ce76039e55.chunk.js" defer="defer"></script>
+            <div class="crayons-layout crayons-layout--3-cols crayons-layout--3-cols--drop-right-left"
+                id="index-container"
+                data-params="{&quot;sort_by&quot;:&quot;hotness_score&quot;,&quot;sort_direction&quot;:&quot;desc&quot;}"
+                data-which="" data-tag="" data-feed="base-feed" data-articles-since="">
+
+                <div id="sidebar-wrapper-left"
+                    class="sidebar-wrapper sidebar-wrapper-left crayons-layout__sidebar-left crayons-layout__content">
+                    <aside class="side-bar" aria-label="Primary sidebar">
+
+                        <nav class="mb-4 mt-4" data-testid="main-nav" aria-label="DEV Community 👩‍💻👨‍💻">
+                            <ul class="default-navigation-links sidebar-navigation-links spec-sidebar-navigation-links">
+                                <li>
+                                    <a href="/" class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g class="nc-icon-wrapper">
+                                                    <path fill="#A0041E"
+                                                        d="M13.344 18.702h-2a.5.5 0 01-.5-.5v-7a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5z" />
+                                                    <path fill="#FFE8B6" d="M9 20L22 7l13 13v17H9z" />
+                                                    <path fill="#FFCC4D" d="M22 20h1v16h-1z" />
+                                                    <path fill="#66757F"
+                                                        d="M35 21a.997.997 0 01-.707-.293L22 8.414 9.707 20.707a1 1 0 11-1.414-1.414l13-13a.999.999 0 011.414 0l13 13A.999.999 0 0135 21z" />
+                                                    <path fill="#66757F"
+                                                        d="M22 21a.999.999 0 01-.707-1.707l6.5-6.5a1 1 0 111.414 1.414l-6.5 6.5A.997.997 0 0122 21z" />
+                                                    <path fill="#C1694F" d="M14 30h4v6h-4z" />
+                                                    <path fill="#55ACEE"
+                                                        d="M14 21h4v4h-4zm12.5 0h4v4h-4zm0 9h4v4h-4z" />
+                                                    <path fill="#5C913B"
+                                                        d="M37.5 37.5A1.5 1.5 0 0136 39H8a1.5 1.5 0 010-3h28a1.5 1.5 0 011.5 1.5z" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        Home
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g class="nc-icon-wrapper">
+                                                    <path fill="#FFD983"
+                                                        d="M36 4H14a4 4 0 00-4 4v24H8a4 4 0 000 8h24a4 4 0 004-4V12a4 4 0 000-8z" />
+                                                    <path fill="#E39F3D" d="M12 14h24v-2H14l-2-1z" />
+                                                    <path fill="#FFE8B6"
+                                                        d="M14 4a4 4 0 00-4 4v24.555A3.955 3.955 0 008 32a4 4 0 104 4V11.445c.59.344 1.268.555 2 .555a4 4 0 000-8z" />
+                                                    <path fill="#C1694F"
+                                                        d="M16 8a2 2 0 11-4.001-.001A2 2 0 0116 8m-6 28a2 2 0 11-4.001-.001A2 2 0 0110 36m24-17a1 1 0 01-1 1H15a1 1 0 010-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1m0 4a1 1 0 01-1 1H15a1 1 0 110-2h18a1 1 0 011 1" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        Listings
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g class="nc-icon-wrapper">
+                                                    <path fill="#292F33"
+                                                        d="M10 19h24v2H10zm15 15c0 2.208-.792 4-3 4-2.209 0-3-1.792-3-4s.791-2 3-2c2.208 0 3-.208 3 2z" />
+                                                    <path fill="#66757F"
+                                                        d="M22 35c-6.627 0-10 1.343-10 3v2h20v-2c0-1.657-3.373-3-10-3z" />
+                                                    <path fill="#99AAB5" d="M22 4a9 9 0 00-9 9v7h18v-7a9 9 0 00-9-9z" />
+                                                    <g fill="#292F33" transform="translate(4 4)">
+                                                        <circle cx="15.5" cy="2.5" r="1.5" />
+                                                        <circle cx="20.5" cy="2.5" r="1.5" />
+                                                        <circle cx="17.5" cy="6.5" r="1.5" />
+                                                        <circle cx="22.5" cy="6.5" r="1.5" />
+                                                        <circle cx="12.5" cy="6.5" r="1.5" />
+                                                        <circle cx="15.5" cy="10.5" r="1.5" />
+                                                        <circle cx="10.5" cy="10.5" r="1.5" />
+                                                        <circle cx="20.5" cy="10.5" r="1.5" />
+                                                        <circle cx="25.5" cy="10.5" r="1.5" />
+                                                        <circle cx="17.5" cy="14.5" r="1.5" />
+                                                        <circle cx="22.5" cy="14.5" r="1.5" />
+                                                        <circle cx="12.5" cy="14.5" r="1.5" />
+                                                    </g>
+                                                    <path fill="#66757F"
+                                                        d="M13 19.062V21c0 4.971 4.029 9 9 9s9-4.029 9-9v-1.938H13z" />
+                                                    <path fill="#66757F"
+                                                        d="M34 18a1 1 0 00-1 1v2c0 6.074-4.925 11-11 11s-11-4.926-11-11v-2a1 1 0 00-2 0v2c0 7.18 5.82 13 13 13s13-5.82 13-13v-2a1 1 0 00-1-1z" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        Podcasts
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g transform="translate(4 4)">
+                                                    <path fill="#31373D"
+                                                        d="M34.074 18l-4.832 3H28v-4c0-.088-.02-.169-.026-.256C31.436 15.864 34 12.735 34 9a8 8 0 00-16.001 0c0 1.463.412 2.822 1.099 4H14.92c.047-.328.08-.66.08-1a7 7 0 10-14 0 6.995 6.995 0 004 6.317V29a4 4 0 004 4h15a4 4 0 004-4v-3h1.242l4.832 3H35V18h-.926zM28.727 3.977a5.713 5.713 0 012.984 4.961L28.18 8.35a2.276 2.276 0 00-.583-.982l1.13-3.391zm-.9 6.342l3.552.592a5.713 5.713 0 01-4.214 3.669 3.985 3.985 0 00-1.392-1.148l.625-2.19a2.425 2.425 0 001.429-.923zM26 3.285c.282 0 .557.027.828.067l-1.131 3.392c-.404.054-.772.21-1.081.446L21.42 5.592A5.703 5.703 0 0126 3.285zM20.285 9c0-.563.085-1.106.236-1.62l3.194 1.597-.002.023c0 .657.313 1.245.771 1.662L23.816 13h-1.871a5.665 5.665 0 01-1.66-4zm-9.088-.385A4.64 4.64 0 0112.667 12c0 .344-.043.677-.113 1H10.1c.145-.304.233-.641.233-1a2.32 2.32 0 00-.392-1.292l1.256-2.093zM8 7.333c.519 0 1.01.105 1.476.261L8.22 9.688c-.073-.007-.145-.022-.22-.022a2.32 2.32 0 00-1.292.392L4.615 8.803A4.64 4.64 0 018 7.333zM3.333 12c0-.519.105-1.01.261-1.477l2.095 1.257c-.007.073-.022.144-.022.22 0 .75.36 1.41.91 1.837a3.987 3.987 0 00-1.353 1.895C4.083 14.881 3.333 13.533 3.333 12z" />
+                                                    <circle fill="#8899A6" cx="24" cy="19" r="2" />
+                                                    <circle fill="#8899A6" cx="9" cy="19" r="2" />
+                                                    <path fill="#8899A6"
+                                                        d="M24 27a2 2 0 00-2-2H11a2 2 0 00-2 2v6a2 2 0 002 2h11a2 2 0 002-2v-6z" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        Videos
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g class="nc-icon-wrapper">
+                                                    <path fill="#FFD983"
+                                                        d="M36.017 24.181L21.345 9.746C20.687 9.087 19.823 9 18.96 9H8.883C7.029 9 6 10.029 6 11.883v10.082c0 .861.089 1.723.746 2.38L21.3 39.017a3.287 3.287 0 004.688 0l10.059-10.088c1.31-1.312 1.28-3.438-.03-4.748zm-23.596-8.76a1.497 1.497 0 11-2.118-2.117 1.497 1.497 0 012.118 2.117z" />
+                                                    <path fill="#D99E82"
+                                                        d="M13.952 11.772a3.66 3.66 0 00-5.179 0 3.663 3.663 0 105.18 5.18 3.664 3.664 0 00-.001-5.18zm-1.53 3.65a1.499 1.499 0 11-2.119-2.12 1.499 1.499 0 012.119 2.12z" />
+                                                    <path fill="#C1694F"
+                                                        d="M12.507 14.501a1 1 0 11-1.415-1.414l8.485-8.485a1 1 0 111.415 1.414l-8.485 8.485z" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        Tags
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g class="nc-icon-wrapper">
+                                                    <path fill="#FFD983"
+                                                        d="M33 15.06c0 6.439-5 7.439-5 13.44 0 3.098-3.123 3.359-5.5 3.359-2.053 0-6.586-.779-6.586-3.361C15.914 22.5 11 21.5 11 15.06c0-6.031 5.285-10.92 11.083-10.92C27.883 4.14 33 9.029 33 15.06z" />
+                                                    <path fill="#CCD6DD"
+                                                        d="M26.167 36.5c0 .828-2.234 2.5-4.167 2.5-1.933 0-4.167-1.672-4.167-2.5 0-.828 2.233-.5 4.167-.5 1.933 0 4.167-.328 4.167.5z" />
+                                                    <path fill="#FFCC4D"
+                                                        d="M26.707 14.293a.999.999 0 00-1.414 0L22 17.586l-3.293-3.293a1 1 0 10-1.414 1.414L21 19.414V30a1 1 0 102 0V19.414l3.707-3.707a.999.999 0 000-1.414z" />
+                                                    <path fill="#99AAB5"
+                                                        d="M28 35a2 2 0 01-2 2h-8a2 2 0 01-2-2v-6h12v6z" />
+                                                    <path fill="#CCD6DD"
+                                                        d="M15.999 36a1 1 0 01-.163-1.986l12-2a.994.994 0 011.15.822.999.999 0 01-.822 1.15l-12 2a.927.927 0 01-.165.014zm0-4a1 1 0 01-.163-1.986l12-2a.995.995 0 011.15.822.999.999 0 01-.822 1.15l-12 2a.927.927 0 01-.165.014z" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        FAQ
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <g class="nc-icon-wrapper">
+                                                    <path fill="#F4900C"
+                                                        d="M15 4a8 8 0 00-8 8v8h2v-8a6 6 0 0112 0v8h2v-8a8 8 0 00-8-8z" />
+                                                    <path fill="#DD2E44"
+                                                        d="M5 12l2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2v23H5z" />
+                                                    <path fill="#FFCC4D"
+                                                        d="M29 9a8 8 0 00-8 8v8h2v-8a6 6 0 0112 0v8h2v-8a8 8 0 00-8-8z" />
+                                                    <path fill="#744EAA"
+                                                        d="M19 17l2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2 2-2v23H19z" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        Forem Shop
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="24"
+                                                height="24">
+                                                <path fill="#DD2E44"
+                                                    d="M39.885 15.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C5.751 26.587 15.216 35.568 22 38.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z" />
+                                            </svg>
+
+                                        </span>
+                                        Sponsors
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="sidebar-navigation-link c-link c-link--block c-link--icon-left">
+                                        <span class="c-link__icon">
+                                            <svg viewBox="0 0 235 234" xmlns="http://www.w3.org/2000/svg"
+                                                class="rainbow-logo" preserveAspectRatio="xMinYMin meet">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path fill="#88AEDC"
+                                                        d="M234.04 175.67l-75.69 58.28h47.18L234.04 212z" />
+                                                    <path
+                                                        d="M234.04 140.06l-121.93 93.89h.02l121.91-93.87zM133.25.95L.04 103.51v.02L133.27.95z" />
+                                                    <path fill="#F58F8E" fill-rule="nonzero"
+                                                        d="M.04.95v30.16L39.21.95z" />
+                                                    <path fill="#FEE18A" fill-rule="nonzero"
+                                                        d="M39.21.95L.04 31.11v35.9L85.84.95z" />
+                                                    <path fill="#F3F095" fill-rule="nonzero"
+                                                        d="M85.84.95L.04 67.01v36.5L133.25.95z" />
+                                                    <path fill="#55C1AE" fill-rule="nonzero"
+                                                        d="M133.27.95L.04 103.53v35.59L179.49.95z" />
+                                                    <path fill="#F7B3CE" fill-rule="nonzero"
+                                                        d="M234.04.95h-7.37L.04 175.45v35.93l234-180.18z" />
+                                                    <path fill="#88AEDC" fill-rule="nonzero"
+                                                        d="M179.49.95L.04 139.12v36.33L226.67.95z" />
+                                                    <path fill="#F58F8E" fill-rule="nonzero"
+                                                        d="M234.04 31.2L.04 211.38v22.57h18.03l215.97-166.3z" />
+                                                    <path fill="#FEE18A" fill-rule="nonzero"
+                                                        d="M234.04 67.65L18.07 233.95H64.7l169.34-130.39z" />
+                                                    <path fill="#F3F095" fill-rule="nonzero"
+                                                        d="M234.04 103.56L64.7 233.95h47.41l121.93-93.89z" />
+                                                    <path fill="#55C1AE" fill-rule="nonzero"
+                                                        d="M234.04 140.08l-121.91 93.87h46.22l75.69-58.28z" />
+                                                    <path fill="#F7B3CE" fill-rule="nonzero"
+                                                        d="M234.04 212l-28.51 21.95h28.51z" />
+                                                    <path
+                                                        d="M65.237 77.75c4.514.95 7.774 2.8 11.135 6.3 3.059 3.2 4.965 6.85 5.767 10.95.652 3.45.652 40.55 0 44.05-1.705 9.1-9.479 16.2-19.109 17.45-2.006.25-8.727.5-14.845.5H37V77h12.438c8.828 0 13.342.2 15.8.75zM51.545 117v25.6l5.166-.2c4.464-.15 5.417-.35 7.423-1.5 3.912-2.3 3.962-2.45 3.962-24.2 0-21.2 0-21.2-3.661-23.6-1.806-1.2-2.558-1.35-7.473-1.55l-5.417-.15V117zm79.245-32.75v7.25h-25.58v18h15.549V124H105.21l.1 9.1.15 9.15 12.69.15 12.638.1V157h-14.795c-16.451 0-19.009-.3-21.617-2.6-3.661-3.2-3.46-1.15-3.611-36.3-.1-21.9.05-32.25.401-33.65.702-2.6 3.661-5.8 6.27-6.7 1.554-.55 5.466-.7 17.704-.75h15.648v7.25zm31.647 20.85c3.712 14.25 6.821 25.6 6.922 25.25.15-.35 3.31-12.4 7.071-26.85l6.872-26.25 7.824-.15c5.918-.1 7.874.05 7.874.5s-17.354 66.2-18.357 69.5c-.702 2.3-4.463 7-6.57 8.25-2.658 1.5-6.57 1.75-8.978.5-2.156-1.1-5.015-4.4-6.47-7.5-.902-1.9-15.648-56-19.058-70l-.352-1.35h7.825c7.673 0 7.874 0 8.275 1.1.2.65 3.41 12.8 7.122 27z"
+                                                        fill="#FFF" />
+                                                </g>
+                                            </svg>
+
+                                        </span>
+                                        About
+                                    </a>
+                                </li>
+
+
+
+                            </ul>
+                        </nav>
+
+                        <nav class="mb-4" data-testid="other-nav" aria-labelledby="other-nav-heading-sidebar">
+                            <h3> Contact </h3>
+                        </nav>
+
+                        <div class="flex justify-start mb-4">
+                            <a href="https://github.com/nuriddin321" target="_blank"
+                                class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ako9rnosih7kfbwqdn55295tdhw11h7i"
+                                    class="crayons-icon c-link__icon">
+                                    <title id="ako9rnosih7kfbwqdn55295tdhw11h7i">Github</title>
+                                    <path
+                                        d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0022 12c0-5.525-4.475-10-10-10z">
+                                    </path>
+                                </svg>
+
+                            </a>
+
+                            <a href="https://instagram.com/developer_321" target="_blank"
+                                class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="aabuy6q2rp2v11kl6tg1wz9m3k5w4z3"
+                                    class="crayons-icon c-link__icon">
+                                    <title id="aabuy6q2rp2v11kl6tg1wz9m3k5w4z3">Instagram</title>
+                                    <path
+                                        d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
+                                    </path>
+                                </svg>
+
+                            </a>
+
+                            <a target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="a693fz1fjq7zhwgaiw1yk4k9pn9o7rsw"
+                                    class="crayons-icon c-link__icon">
+                                    <title id="a693fz1fjq7zhwgaiw1yk4k9pn9o7rsw">Facebook</title>
+                                    <path
+                                        d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
+                                    </path>
+                                </svg>
+
+                            </a>
+
+
+                            <a target="_blank" class="c-link c-link--icon-alone c-link--block mx-1" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="a12yygwbu80fdetc3nkb1emcid00ztuv"
+                                    class="crayons-icon c-link__icon">
+                                    <title id="a12yygwbu80fdetc3nkb1emcid00ztuv">Twitter</title>
+                                    <path
+                                        d="M22.162 5.656a8.383 8.383 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.211 4.211 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.395 8.395 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.495 8.495 0 002.087-2.165l-.001-.001z"
+                                        fill="#65bbf2"></path>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                        <nav class="mb-6" aria-label="Secondary sidebar nav">
+                            <h3 class="crayons-subtitle-3 p-2">Popular Tags</h3>
+                            <div id="sidebar-nav-default-tags" class="overflow-y-auto" style="max-height: 42vh">
+                                <div class="sidebar-nav-element" id="default-sidebar-element-javascript">
+                                    <a class="c-link c-link--block"  >
+                                        #javascript
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-webdev">
+                                    <a class="c-link c-link--block">
+                                        #webdev
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-beginners">
+                                    <a class="c-link c-link--block">
+                                        #beginners
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-programming">
+                                    <a class="c-link c-link--block">
+                                        #programming
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-tutorial">
+                                    <a class="c-link c-link--block">
+                                        #tutorial
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-react">
+                                    <a class="c-link c-link--block">
+                                        #react
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-python">
+                                    <a class="c-link c-link--block">
+                                        #python
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-productivity">
+                                    <a class="c-link c-link--block">
+                                        #productivity
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-devops">
+                                    <a class="c-link c-link--block">
+                                        #devops
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-css">
+                                    <a class="c-link c-link--block">
+                                        #css
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-html">
+                                    <a class="c-link c-link--block">
+                                        #html
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-opensource">
+                                    <a class="c-link c-link--block">
+                                        #opensource
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-aws">
+                                    <a class="c-link c-link--block">
+                                        #aws
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-node">
+                                    <a class="c-link c-link--block">
+                                        #node
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-career">
+                                    <a class="c-link c-link--block">
+                                        #career
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-typescript">
+                                    <a class="c-link c-link--block">
+                                        #typescript
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-discuss">
+                                    <a class="c-link c-link--block">
+                                        #discuss
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-android">
+                                    <a class="c-link c-link--block">
+                                        #android
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-codenewbie">
+                                    <a class="c-link c-link--block">
+                                        #codenewbie
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-java">
+                                    <a class="c-link c-link--block">
+                                        #java
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-news">
+                                    <a class="c-link c-link--block">
+                                        #news
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-testing">
+                                    <a class="c-link c-link--block">
+                                        #testing
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-github">
+                                    <a class="c-link c-link--block">
+                                        #github
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-security">
+                                    <a class="c-link c-link--block">
+                                        #security
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-php">
+                                    <a class="c-link c-link--block">
+                                        #php
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-cloud">
+                                    <a class="c-link c-link--block">
+                                        #cloud
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-database">
+                                    <a class="c-link c-link--block">
+                                        #database
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-datascience">
+                                    <a class="c-link c-link--block">
+                                        #datascience
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-linux">
+                                    <a class="c-link c-link--block">
+                                        #linux
+                                    </a>
+                                </div>
+                                <div class="sidebar-nav-element" id="default-sidebar-element-showdev">
+                                    <a class="c-link c-link--block">
+                                        #showdev
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <div class="crayons-card crayons-card--secondary p-3 crayons-sponsorship-widget"
+                            data-display-unit data-id="155">
+                            <p><a><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--0VA_opuX--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r958p7649efealx01xe6.png"
+                                        alt="webassembly" width="1000" height="500" loading="lazy"></a> </p>
+                            <p><strong><a href=" ">Immerse
+                                        yourself in the WebAssembly ecosystem ✅</a></strong></p>
+                        </div>
+                        <div class="mt-4 crayons-card crayons-card--secondary p-3 crayons-sponsorship-widget"
+                            data-display-unit data-id="137">
+                            <p>DEV runs on 100% open source code known as <a href=" ">Forem</a>.</p>
+                            <p>Contribute to the codebase or host your own!</p>
+                            <p><strong>Check these out! 👇</strong></p>
+                            <ul>
+                                <li><a>Main Forem Repo</a></li>
+                                <li><a>Self-Host Instructions</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+
+                <main class="articles-list crayons-layout__content" id="main-content"
+                    data-follow-button-container="true">
+
+
+                    <header class="p-2 px-3 m:p-0 m:px-0 m:mb-2 fs-l">
+                        <h1 class="">Posts</h1>
+                    </header>
+
+                    <!------------------ Content here -------------------------------------------------------------------------->
+                @foreach(var p in Model)
+                {  
+                    <div class="crayons-story crayons-story--featured" data-content-user-id="827951">
+                         @* post image *@
+                        <div class="crayons-article__cover crayons-article__cover__image__feed">
+                            <a  class="crayons-article__cover__image__feed crayons-story__cover__image">
+                                <img src="@p.Image" width="650" height="275" style="background-color:#dddddd;"
+                                    class="crayons-article__cover__image__feed" >
+                            </a>
+                        </div>
+
+
+                        <div class="crayons-story__body">
+                            <div class="crayons-story__top">
+                                <div class="crayons-story__meta">
+                                    @* avtorni rasmi *@
+                                    <div class="crayons-story__author-pic">
+
+                                        <a href=" " class="crayons-avatar  crayons-avatar--l  ">
+                                            <img src="@p.AuthorImage"
+                                                alt="wiseai profile" class="crayons-avatar__image" loading="lazy" />
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            @* <a href=" " class="crayons-story__secondary fw-medium m:hidden">
+                                                Mahmoud Harmouch
+                                            </a> *@
+                                            <div class="profile-preview-card relative mb-4 s:mb-0    fw-medium hidden m:inline-block">
+                                                <button id="story-author-preview-trigger-1201919"
+                                                    aria-controls="story-author-preview-content-1201919"
+                                                    class="profile-preview-card__trigger fs-s p-1 -ml-1 -my-2 crayons-btn crayons-btn--ghost" >
+                                                    @p.Author
+                                                </button>
+                                                <div id="story-author-preview-content-1201919"
+                                                    class="profile-preview-card__content crayons-dropdown branded-7 p-4 pt-0"
+                                                    style="border-top-color: var(--card-color);"
+                                                    data-repositioning-dropdown="true"
+                                                    data-testid="profile-preview-card">
+                                                    <div class="gap-4 grid">
+                                                        <div class="-mt-4">
+                                                            <a href=" " class="flex">
+                                                                <span
+                                                                    class="crayons-avatar crayons-avatar--xl mr-2 shrink-0">
+                                                                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--xHHrMF4A--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/827951/fe26f154-d505-4327-8748-68fad81e0c8b.jpeg"
+                                                                        class="crayons-avatar__image" alt=""
+                                                                        loading="lazy" />
+                                                                </span>
+                                                                <span
+                                                                    class="crayons-link crayons-subtitle-2 mt-5">@p.Author</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="print-hidden">
+                                                            <button
+                                                                class="crayons-btn follow-action-button whitespace-nowrap follow-user w-100"
+                                                                data-info='{&quot;style&quot;:&quot;full&quot;,&quot;id&quot;:827951,&quot;className&quot;:&quot;User&quot;,&quot;name&quot;:&quot;Mahmoud Harmouch&quot;}'>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                        <div class="author-preview-metadata-container"
+                                                            data-author-id="827951"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="crayons-story__tertiary fs-xs"><time
+                                                datetime="2022-09-24T13:46:35Z">@p.CreatedDate</time><span
+                                                class="time-ago-indicator-initial-placeholder"
+                                                data-seconds="1664027195"></span></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            @* title *@
+                            <div class="crayons-story__indention">
+                                <h2 class="crayons-story__title">
+                                    <a href=" "
+                                        data-preload-image="https://res.cloudinary.com/practicaldev/image/fetch/s--LpzgDtjB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3ivon50sdm1h96tluxpr.jpg"
+                                        id="article-link-1201919">
+                                       @p.Title
+                                    </a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                      @*-----  *@
+                    <br>
+                }
+                </main>
+                <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                <!-- done  -->
+                
+                <div id="sidebar-wrapper-right"  class="sidebar-wrapper sidebar-wrapper-right crayons-layout__sidebar-right     crayons-layout__content">
+                    <aside class="side-bar sidebar-additional showing grid gap-4" id="sidebar-additional">
+                        <div class="crayons-card crayons-card--secondary p-4 crayons-sponsorship-widget"
+                                data-display-unit>
+                                <p><a><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ff2NVgR1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ekb1fyzsp9jx2uxdnrqt.png"
+                                            alt="Purple rectagle with a white version of the DEV logo surrounded by emojis of people on laptops. Text to the right says "
+                                            height="664" width="1604" loading="lazy"><br><br></a></p>
+                                <h3> <a class="anchor"> </a> Tell us your thoughts
+                                    about DEV!</h3>
+                                <p><br></p>
+                                <h4> <a>→
+                                        Take the DEV Satisfaction Survey</a>
+                                </h4>
+                        </div>
+                            <!-- section is done -->
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2">Listings</h3>
+                                <div class="crayons-card__actions">
+                                    <a class="crayons-link--branded fw-medium fs-s">See all</a>
+                                </div>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful">
+                                    <div>Render-Atlanta 2023 | 80+ Speakers | May 31 - June 2 | 4 Tracks</div>
+                                    <div class="crayons-link__secondary">events</div>
+                                </a>
+                                <a class="crayons-link crayons-link--contentful">
+                                    <div>Developer Jobs Search Tool </div>
+                                    <div class="crayons-link__secondary">products</div>
+                                </a>
+                                <a class="crayons-link crayons-link--contentful">
+                                    <div>Credit 05</div>
+                                    <div class="crayons-link__secondary">collabs</div>
+                                </a>
+                                <a class="crayons-link crayons-link--contentful">
+                                    <div>Free GumRoad Book - 50+ Awesome tools for Web Developers🎁</div>
+                                    <div class="crayons-link__secondary">products</div>
+                                </a>
+                                <a class="crayons-link crayons-link--contentful">
+                                    <div> Capturing Exception Call Stacks from Node.js Applications </div>
+                                    <div class="crayons-link__secondary">products</div>
+                                </a>
+                                <a class="crayons-link crayons-link--branded block align-center p-3 fw-medium fs-s w-100"
+                                    href=" ">Create a Listing</a>
+                            </div>
+                        </section>
+
+
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2"><a class="crayons-link">#help</a></h3>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful" >
+                                    How To Make A Row of Boxes (FLEX)
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </section>
+
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2"><a class="crayons-link">#discuss</a>
+                                </h3>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful">
+                                    Quiet Quitting is About Loyalty
+                                    <div class="crayons-link__secondary">
+                                        7 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful" href=" ">
+                                    What was your win this week?
+                                    <div class="crayons-link__secondary">
+                                        18 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Moderating tags on Dev
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Advice for novice freelancer
+                                    <div class="crayons-link__secondary">
+                                        1 comment
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Cures for burnouts??
+                                    <div class="crayons-link__secondary">
+                                        19 comments
+                                    </div>
+                                </a>
+
+                            </div>
+                        </section>
+
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2"><a class="crayons-link">#explainlikeimfive</a>
+                                </h3>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful">
+                                    Is MVC pattern used only on monolithic web applications?
+                                    <div class="crayons-link__secondary">
+                                        3 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Explain Blockchain like I am Five
+                                    <div class="crayons-link__secondary">
+                                        32 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Goldilocks and the Three Behavioral Patterns - A Design Patterns Intro
+                                    <div class="crayons-link__secondary">
+                                        6 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Explain JSX like I&#39;m five.
+                                    <div class="crayons-link__secondary">
+                                        20 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Explain Encapsulation and Polymorphism Like I&#39;m Five
+                                    <div class="crayons-link__secondary">
+                                        26 comments
+                                    </div>
+                                </a>
+
+                            </div>
+                        </section>
+
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2"><a class="crayons-link">#challenge</a></h3>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful">
+                                    DAY 4 CODE CHALLENGE
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Pulumi Challenge 01
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Interactive rating component - day 1
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    DAY 3 CODE CHALLENGE (PALINDROME INTEGER)
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    #14G10DaysCodeChallenge(Day2: Remove Element)
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </section>
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2"><a class="crayons-link">#meta</a></h3>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful">
+                                    Follow Friday: Python Edition (23 September 2022)
+                                    <div class="crayons-link__secondary">
+                                        2 comments
+                                    </div>
+                                </a>
+
+                            </div>
+                        </section>
+                        <section class="crayons-card crayons-card--secondary crayons-layout__content">
+                            <header class="crayons-card__header">
+                                <h3 class="crayons-subtitle-2"><a class="crayons-link">#watercooler</a></h3>
+                            </header>
+
+                            <div>
+                                <a class="crayons-link crayons-link--contentful">
+                                    Quiet Quitting is About Loyalty
+                                    <div class="crayons-link__secondary">
+                                        7 comments
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    How the 2-minute rule improved my life
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    Intelligence Competition
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                                <a class="crayons-link crayons-link--contentful">
+                                    7 Tricks To Improve Home Office Productivity
+                                    <div class="crayons-link__secondary">
+                                        <span class="c-indicator c-indicator--warning">New</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+
+            <script src="https://dev.to/packs/js/runtime~storiesList-b9beb5ee6e65857034c5.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/storiesList-27b21121cd0a28b64483.chunk.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/runtime~followButtons-0da2a7381c1a247d5a6a.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/7-c64e26fa2a89b0c14488.chunk.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/followButtons-e1c3a73e7eb5c7f22ff8.chunk.js" defer="defer"></script>
+            <script src="https://dev.to/packs/js/runtime~feedPreviewCards-8a768dbb6737cf6afe26.js"
+                defer="defer"></script>
+            <script src="https://dev.to/packs/js/feedPreviewCards-1a28c1a54999168b99a1.chunk.js" defer="defer"></script>
+
+            <div id="runtime-banner-container"></div>
+        </div>
+    </div>
+
+@* ===========================footer layer ========================= *@
+
+   <footer class="crayons-footer print-hidden">
+        <div id="footer-container" class="crayons-footer__container">
+            <p class="fs-s crayons-footer__description">
+                <a class="c-link c-link--branded fw-medium" aria-label="DEV Community 👩‍💻👨‍💻 Home">DEV
+                    Community 👩‍💻👨‍💻</a> — A constructive and inclusive social network for software developers. With
+                you every step of your journey.
+            </p>
+            <div class="fs-s">
+                <p>Built on <a class="c-link c-link--branded" target="_blank" rel="noopener" href=" ">Forem</a> — the <a
+                        target="_blank" rel="noopener" class="c-link c-link--branded">open source</a> software
+                    that
+                    powers <a target="_blank" rel="noopener" class="c-link c-link--branded">DEV</a> and other
+                    inclusive communities.</p>
+                <p>Made with love and <a target="_blank" rel="noopener" class="c-link c-link--branded">Ruby on
+                        Rails</a>. DEV Community 👩‍💻👨‍💻 <span title="copyright">&copy;</span> 2016 - 2022.</p>
+            </div>
+            <a target="_blank" rel="noopener" class="c-link c-link c-link--block c-link--icon-alone self-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    role="img" aria-labelledby="a5ah3yzbbqttl0prf5j4cxxqjpqbor9t"
+                    class="crayons-icon crayons-icon--default c-link__icon">
+                    <title id="a5ah3yzbbqttl0prf5j4cxxqjpqbor9t">Forem logo</title>
+                    <g clip-path="url(#clip0)" fill="#1AB3A6">
+                        <path
+                            d="M4.603 1.438a8.056 8.056 0 017.643 5.478 8.543 8.543 0 00-3.023 5.968H8.054C3.606 12.884 0 9.296 0 4.87V1.468a.03.03 0 01.03-.03h4.573zM23.97 6.515a.03.03 0 01.03.03v2.833c0 4.11-3.354 7.442-7.491 7.442h-2.881v5.726h-2.305V14.53l.022-1.145c.294-3.843 3.526-6.87 7.469-6.87h5.155z">
+                        </path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <path fill="#fff" d="M0 0h24v24H0z"></path>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </a>
+        </div>
+    </footer>
